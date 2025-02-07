@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include "libft/libft.h"
 
 static char ft_hexconvert(unsigned int n)
 {
@@ -23,13 +22,16 @@ static char ft_hexconvert(unsigned int n)
     return (x);
 }
 
-void    ft_puthex(unsigned int n, int *count)
+int    ft_puthex(unsigned int n)
 {
     char    c;
+    unsigned int	count;
 
+    count = 0;
     if (n >= 16)
-        ft_puthex(n / 16);
+         count += ft_puthex(n / 16);
     c = ft_hexconvert(n % 16);
     write(1, &c, 1);
-    (*count)++;
+    count++;
+    return (count);
 }
