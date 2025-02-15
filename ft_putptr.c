@@ -15,13 +15,14 @@
 int	ft_putptr(void *ptr)
 {
 	int	count;
-	
+
+	count = 0;
 	if (ptr == NULL)
 	{
 		write(1, "(nil)", 5);
 		return (5);
 	}
 	count = write (1, "0x", 2);
-	count += ft_puthex((unsigned long)ptr);
+	count += ft_puthex((uintptr_t)ptr);
 	return (count);
 }

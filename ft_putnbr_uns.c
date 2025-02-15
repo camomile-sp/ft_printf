@@ -6,7 +6,7 @@
 /*   By: apavlova <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 22:02:51 by apavlova          #+#    #+#             */
-/*   Updated: 2025/02/03 22:03:16 by apavlova         ###   ########.fr       */
+/*   Updated: 2025/02/08 18:46:57 by apavlova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 
 int	ft_putnbr_uns(unsigned int n)
 {
-	int	count;
+	int		count;
 	char	c;
-	
+
 	count = 0;
 	if (n >= 10)
 		ft_putnbr_uns(n / 10);

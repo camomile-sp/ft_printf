@@ -16,7 +16,7 @@
 int	ft_putnbr(int n)
 {
 	int	count;
-	
+
 	count = 0;
 	ft_putnbr_fd(n, 1);
 	if (n <= 0)
